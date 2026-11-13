@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Self-driving lab: automated coating platform — Solomon Pius</title>
+<meta name="description" content="Automated coating, curing, washing and contact-angle measurement on an Opentrons OT-2 for the RAISE self-driving lab.">
+<meta property="og:title" content="Self-driving lab: automated coating platform — Solomon Pius">
+<meta property="og:description" content="Automated coating, curing, washing and contact-angle measurement on an Opentrons OT-2 for the RAISE self-driving lab.">
+<meta property="og:image" content="assets/raise-demo-poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo">Solomon Pius<span>.</span></a>
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a class="cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap crumbs"><a href="index.html#work">← All work</a><span class="mono">Project 02 / 06</span></div>
+  <div class="wrap">
+  <article class="project" id="raise">
+    <header>
+      <div><span class="mono">Research · DREAM Laboratory, Prof. Kevin Golovin · May–Aug 2026</span><h3>Self-driving lab: automated coating platform</h3></div>
+    </header>
+    <div class="meta">
+      <div><span class="mono">Role</span>Custom hardware design, Python &amp; Arduino automation, testing</div>
+      <div><span class="mono">Tools</span>Python, Arduino, Opentrons OT-2, Onshape</div>
+      <div><span class="mono">Context</span>RAISE, a self-driving lab at the University of Toronto</div>
+    </div>
+    <div class="cols">
+      <div>
+        <h4>Problem</h4>
+        <p>Coating, curing, washing and measuring the contact angle of PDMS substrates was done by hand. That made it slow and hard to repeat. RAISE needed it to run end-to-end with no manual handling.</p>
+        <h4>What I built</h4>
+        <ul>
+          <li>Designed and 3D-printed <b>11 custom components</b> in Onshape, including a servo-tilted washing station, a blade-coating stage and a superhydrophobic tip rack.</li>
+          <li>Wrote the Python automation stack, <b>repurposing the pipette mount as a robotic gripper</b> to move substrates around the deck.</li>
+          <li>Controlled Arduino-driven pumps and servos over serial from the OT-2 protocol.</li>
+          <li>Full workflow: load → dispense silicone → blade coat → heat cure → pump wash → measure contact angle → return.</li>
+        </ul>
+      </div>
+      <div class="results">
+        <div class="result"><b>25</b><span>automated coating experiments run</span></div>
+        <div class="result"><b>−52%</b><span>contact angle hysteresis with thinner substrates</span></div>
+        <div class="result"><b>+59%</b><span>receding contact angle with thinner substrates</span></div>
+        <div class="result"><b>0</b><span>manual handling steps in the loop</span></div>
+      </div>
+    </div>
+    <div class="demo">
+      <video src="assets/raise-demo.mp4" poster="assets/raise-demo-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="demo-cap"><span class="mono">Demo · real hardware</span><h4>The OT-2 running the coating workflow hands-free</h4><p>The pipette mount works as a gripper, moving the substrate between the custom stations while Arduino-driven pumps and servos handle washing. Shown at 3× speed.</p><div class="links"><a class="btn primary" href="https://youtu.be/_Nt3Um_-F7s" target="_blank" rel="noopener">▶ Full run on YouTube</a></div></div>
+    </div>
+    <div class="gallery">
+      <figure><img src="assets/raise-deck.jpg" alt="Annotated OT-2 deck"><figcaption>OT-2 deck layout and automated workflow</figcaption></figure>
+      <figure><img src="assets/raise-hw.jpg" alt="Custom hardware CAD"><figcaption>Custom hardware designed in Onshape</figcaption></figure>
+      <figure><img src="assets/raise-chart.jpg" alt="Contact angle chart"><figcaption>Advancing vs. receding contact angle over heating time</figcaption></figure>
+    </div>
+  </article>
+  </div>
+  <div class="pager wrap">
+  <a class="prev" href="hopcopter.html"><span class="mono">← Previous</span><b>Hopcopter: hop-and-roll tensegrity locomotion</b></a>
+  <a class="next" href="cup-pong.html"><span class="mono">Next →</span><b>Autonomous cup pong robot</b></a>
+</div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's build something<br><em>that moves.</em></h2>
+    <p>Want to talk robots, research or a project? Email or LinkedIn is the fastest way to reach me.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:solomon.pius@outlook.com">solomon.pius@outlook.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/solomon-pius/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/SolomonPius" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="assets/Solomon_Pius_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    </div>
+    <div class="fine"><span>© 2026 Solomon Pius · Toronto, ON</span><span>English · Français</span></div>
+  </div>
+</footer>
+<div class="lb" id="lb"><img alt=""><p></p></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

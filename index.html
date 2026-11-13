@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solomon Pius — Robotics Engineer</title>
+<meta name="description" content="Solomon Pius, robotics engineer. Robot design, kinematics, control, autonomy and lab automation.">
+<meta property="og:title" content="Solomon Pius — Robotics Engineer">
+<meta property="og:description" content="Robot design, kinematics, control, autonomy and lab automation.">
+<meta property="og:image" content="assets/pong-build.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Solomon Pius<span>.</span></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a class="cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="mono">Robotics engineer · Toronto</div>
+  <h1>I build robots that<br><em>sense, plan and move.</em></h1>
+  <p class="lede">I'm a robotics engineering student at the University of Toronto, graduating in 2027, with a minor in AI. I design and build robots end to end: mechanisms and custom hardware, kinematics and control, and the autonomy that ties them together. Long-term, I'm working toward humanoid robots.</p>
+  <div class="links">
+    <a class="btn primary" href="#work">See my work ↓</a>
+    <a class="btn" href="assets/Solomon_Pius_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+    <a class="btn" href="https://www.linkedin.com/in/solomon-pius/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn" href="https://github.com/SolomonPius" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="stats">
+    <div><b>±1.96°</b><small>avg. aiming error, autonomous cup pong turret</small></div>
+    <div><b>25</b><small>fully automated coating experiments on an OT-2</small></div>
+    <div><b>11</b><small>custom printed parts for a self-driving lab</small></div>
+    <div><b>3/3</b><small>offices hit by Bayes-filter mail robot</small></div>
+  </div>
+</header>
+
+<!-- NOW -->
+<section class="wrap" id="now" style="padding-top:24px">
+  <div class="now">
+    <div>
+      <div class="mono">Now · Undergraduate thesis · CLIMB Lab</div>
+      <h3>Hop-and-roll locomotion for a hopping quadcopter</h3>
+      <p>With Prof. Pakpong Chirarattananon, I'm designing a multi-legged tensegrity structure that lets a hopping quadcopter roll from leg to leg between hops, so it keeps moving after rough landings instead of crashing.</p>
+      <div class="links" style="margin-top:22px"><a class="btn primary" href="hopcopter.html">Read about the thesis ↓</a></div>
+    </div>
+    <ul>
+      <li><b>Simulation baseline:</b> RK4 tensegrity simulator in MATLAB. 0.73 coefficient of restitution at a 3.5 m/s landing.</li>
+      <li><b>Next:</b> extending to multi-hop, leg-to-leg rolling.</li>
+      <li><b>Learning:</b> a dynamics model trained on simulated and experimental data to plan hop trajectories and landing control, borrowing sim-to-real methods from legged robots.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WORK OVERVIEW -->
+<section class="wrap" id="work" style="padding-top:88px">
+  <div class="sec-head"><h2>Selected work</h2><span class="mono">2023 — 2026</span></div>
+
+  <div class="grid">
+    <a class="card" href="raise.html">
+      <div class="img"><img src="assets/raise-deck.jpg" alt="Opentrons OT-2 deck with custom coating modules"><span class="vbadge">▶ Video</span></div>
+      <div class="body">
+        <span class="mono">Research · DREAM Lab · 2026</span>
+        <h3>Self-driving lab: automated coating platform</h3>
+        <p>Turned an Opentrons OT-2 into a hands-free coat → cure → wash → measure pipeline for RAISE.</p>
+        <div class="kpi">−52% contact angle hysteresis found</div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Arduino</span><span class="tag">OT-2</span><span class="tag">Onshape</span></div><div class="more">View project →</div>
+      </div>
+    </a>
+    <a class="card" href="cup-pong.html">
+      <div class="img"><img src="assets/pong-build.jpg" alt="Autonomous cup pong turret robot" style="object-position:center 35%"><span class="vbadge">▶ Video</span></div>
+      <div class="body">
+        <span class="mono">Course project · MIE438 · 2026</span>
+        <h3>Autonomous cup pong robot</h3>
+        <p>A LiDAR-scanning turret that finds the nearest cup, aims and fires, with no human input.</p>
+        <div class="kpi">100% detection · ±1.96° aim · 200 cm range</div>
+        <div class="tags"><span class="tag">ESP32</span><span class="tag">C++</span><span class="tag">LiDAR</span><span class="tag">3D printing</span></div><div class="more">View project →</div>
+      </div>
+    </a>
+    <a class="card" href="kuka.html">
+      <div class="img"><img src="assets/kuka-arm.jpg" alt="KUKA industrial arm drawing on paper"><span class="vbadge">▶ Video</span></div>
+      <div class="body">
+        <span class="mono">Course project · Robot kinematics</span>
+        <h3>KUKA arm: kinematics-driven drawing</h3>
+        <p>Derived the forward and inverse kinematics of a 6-DOF KUKA arm and used them to draw custom designs.</p>
+        <div class="kpi">187-point path → drawn by the arm</div>
+        <div class="tags"><span class="tag">MATLAB</span><span class="tag">DH params</span><span class="tag">IK</span></div><div class="more">View project →</div>
+      </div>
+    </a>
+    <a class="card" href="mail.html">
+      <div class="img"><img src="assets/mail-team.jpg" alt="Solomon with the TurtleBot3 mail delivery robot" style="object-position:center 40%"><span class="vbadge">▶ Video</span></div>
+      <div class="body">
+        <span class="mono">Course project · ROS2 · 2025</span>
+        <h3>Autonomous mail delivery robot</h3>
+        <p>TurtleBot3 that localizes from an unknown start using only a camera, then delivers to target offices.</p>
+        <div class="kpi">Converged in 4 observations · 3/3 deliveries</div>
+        <div class="tags"><span class="tag">ROS2</span><span class="tag">Python</span><span class="tag">Bayes filter</span><span class="tag">PID</span></div><div class="more">View project →</div>
+      </div>
+    </a>
+    <a class="card" href="power.html">
+      <div class="img"><img src="assets/pcb-final.jpg" alt="Power monitoring module under test"></div>
+      <div class="body">
+        <span class="mono">Course project · MIE366 · Electronics</span>
+        <h3>Power monitoring &amp; protection module</h3>
+        <p>A board that converts a load's current draw into a voltage signal, so a controller can monitor power use in real time.</p>
+        <div class="kpi">LTspice → PCB → soldered and bench-tested</div>
+        <div class="tags"><span class="tag">LTspice</span><span class="tag">Eagle PCB</span><span class="tag">Soldering</span></div><div class="more">View project →</div>
+      </div>
+    </a>
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="wrap" id="skills" style="padding-top:24px">
+  <div class="sec-head"><h2>Toolkit</h2><span class="mono">What I work with</span></div>
+  <div class="skills">
+    <div class="skill"><span class="mono">Programming</span><div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">MATLAB</span><span class="tag">Assembly</span></div></div>
+    <div class="skill"><span class="mono">Robotics</span><div class="tags"><span class="tag">ROS2</span><span class="tag">Arduino / ESP32</span><span class="tag">Opentrons OT-2</span><span class="tag">FK / IK</span><span class="tag">State estimation</span></div></div>
+    <div class="skill"><span class="mono">Mechanical</span><div class="tags"><span class="tag">SolidWorks</span><span class="tag">Onshape</span><span class="tag">3D printing</span><span class="tag">Prototyping</span></div></div>
+    <div class="skill"><span class="mono">Electronics</span><div class="tags"><span class="tag">SystemVerilog</span><span class="tag">LTspice</span><span class="tag">Eagle PCB</span><span class="tag">Soldering</span></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's build something<br><em>that moves.</em></h2>
+    <p>Want to talk robots, research or a project? Email or LinkedIn is the fastest way to reach me.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:solomon.pius@outlook.com">solomon.pius@outlook.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/solomon-pius/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/SolomonPius" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="assets/Solomon_Pius_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    </div>
+    <div class="fine"><span>© 2026 Solomon Pius · Toronto, ON</span><span>English · Français</span></div>
+  </div>
+</footer>
+
+<div class="lb" id="lb"><img alt=""><p></p></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

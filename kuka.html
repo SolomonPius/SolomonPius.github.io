@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KUKA robotic arm: kinematics-driven drawing — Solomon Pius</title>
+<meta name="description" content="Forward and inverse kinematics of a 6-DOF KUKA arm, used to draw custom designs on paper.">
+<meta property="og:title" content="KUKA robotic arm: kinematics-driven drawing — Solomon Pius">
+<meta property="og:description" content="Forward and inverse kinematics of a 6-DOF KUKA arm, used to draw custom designs on paper.">
+<meta property="og:image" content="assets/kuka-arm.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo">Solomon Pius<span>.</span></a>
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a class="cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap crumbs"><a href="index.html#work">← All work</a><span class="mono">Project 04 / 06</span></div>
+  <div class="wrap">
+  <article class="project" id="kuka">
+    <header>
+      <div><span class="mono">Robot Modeling &amp; Control</span><h3>KUKA robotic arm: kinematics-driven drawing</h3></div>
+    </header>
+    <div class="meta">
+      <div><span class="mono">Role</span>DH modelling, elbow-up IK, surface calibration, custom path programming</div>
+      <div><span class="mono">Tools</span>MATLAB, Robotics Toolbox</div>
+      <div><span class="mono">Robot</span>6-DOF KUKA industrial arm</div>
+    </div>
+    <div class="cols">
+      <div>
+        <h4>Problem</h4>
+        <p>Derive the forward and inverse kinematics of a 6-DOF industrial arm, then use them to make it draw custom designs on paper.</p>
+        <h4>Pipeline</h4>
+        <ul>
+          <li>Trace a design into (x, y) points.</li>
+          <li>Do a 3-point calibration of the paper plane.</li>
+          <li>Transform points from the paper frame to the robot base frame.</li>
+          <li>Solve inverse kinematics using kinematic decoupling (elbow-up).</li>
+          <li>Send joint commands to the KUKA.</li>
+        </ul>
+      </div>
+      <div class="results">
+        <div class="result"><b>6-DOF</b><span>full DH model, forward &amp; inverse kinematics derived by hand</span></div>
+        <div class="result"><b>187 pts</b><span>custom “jug” design drawn by the arm</span></div>
+      </div>
+    </div>
+    <div class="demo">
+      <video src="assets/kuka-draw.mp4" poster="assets/kuka-draw-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="demo-cap"><span class="mono">Demo · real hardware</span><h4>The KUKA drawing the jug design</h4><p>All 187 points, computed through my inverse kinematics and executed on the real arm. Shown at 8× speed.</p><div class="links"><a class="btn" href="https://github.com/SolomonPius/kuka-kinematics-drawing" target="_blank" rel="noopener">Code on GitHub ↗</a></div></div>
+    </div>
+    <div class="gallery">
+      <figure><img class="cover" src="assets/kuka-arm.jpg" alt="KUKA arm drawing"><figcaption>KUKA arm drawing</figcaption></figure>
+      <figure><img src="assets/kuka-dh.jpg" alt="DH frames"><figcaption>DH frames at a drawing pose</figcaption></figure>
+      <figure><img src="assets/kuka-jug.jpg" alt="Jug drawing"><figcaption>Input path → drawn by the KUKA</figcaption></figure>
+    </div>
+  </article>
+  </div>
+  <div class="pager wrap">
+  <a class="prev" href="cup-pong.html"><span class="mono">← Previous</span><b>Autonomous cup pong robot</b></a>
+  <a class="next" href="mail.html"><span class="mono">Next →</span><b>Autonomous mail delivery robot</b></a>
+</div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's build something<br><em>that moves.</em></h2>
+    <p>Want to talk robots, research or a project? Email or LinkedIn is the fastest way to reach me.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:solomon.pius@outlook.com">solomon.pius@outlook.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/solomon-pius/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/SolomonPius" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="assets/Solomon_Pius_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    </div>
+    <div class="fine"><span>© 2026 Solomon Pius · Toronto, ON</span><span>English · Français</span></div>
+  </div>
+</footer>
+<div class="lb" id="lb"><img alt=""><p></p></div>
+<script src="assets/site.js"></script>
+</body>
+</html>
